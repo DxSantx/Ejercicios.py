@@ -1,0 +1,55 @@
+productos = [{"id": "001", "nombre": "Azucar", "precio": "$40", "stock": "31"},
+             {"id": "002", "nombre": "Sal", "precio": "$35", "stock": "32"},
+             {"id": "003", "nombre": "Pimienta", "precio": "$25", "stock": "37"}]
+pedidos = [{"id_pedido": "001", "productoSolicitado": "Azucar", "estado": "entregado"},
+           {"id_pedido": "002", "productoSolicitado": "Sal", "estado": "pendiente"}]
+clientesRegistrados = [{"nombre": "Santiago", "Email": "santiafjs@gmail.com", "direccion": "calle 20 #6"},
+                       {"nombre": "Samuel", "Email": "samuelfjs@gmail.com", "direccion": "calle 2 #63"}]
+
+#agregar nuevo producto
+nuevo_producto = {
+    "id": "004", "nombre": "Oregano", "precio": "16", "stock": "87" 
+}
+productos.append(nuevo_producto)
+
+#cambiar el estado
+for pedido in pedidos:
+    if pedido["productoSolicitado"] == "Sal":
+        pedido["estado"] = "entregado"
+print(f"productos: {productos} \npedidos:{pedidos} \nclientes registrados: {clientesRegistrados}")
+
+
+Ejercicio: Gestión de Productos y Pedidos
+
+Este ejercicio consiste en la creación y manipulación de listas de diccionarios en Python para representar un sistema de gestión de productos, pedidos y clientes registrados en una tienda.
+
+Solución Implementada
+
+Se definen tres listas de diccionarios:
+
+productos: Contiene información sobre los productos disponibles, incluyendo su ID, nombre, precio y stock.
+
+pedidos: Lista de pedidos con su ID, el producto solicitado y su estado.
+
+clientesRegistrados: Información sobre los clientes registrados, incluyendo nombre, correo electrónico y dirección.
+
+Se realizan las siguientes operaciones sobre los datos:
+
+Agregar un nuevo producto a la lista productos.
+
+Modificar el estado de un pedido en la lista pedidos.
+
+Imprimir los datos actualizados en pantalla.
+
+Salida del codigo ejecutado
+
+Productos: [{"id": "001", "nombre": "Azúcar", "precio": "$40", "stock": "31"}, 
+            {"id": "002", "nombre": "Sal", "precio": "$35", "stock": "32"}, 
+            {"id": "003", "nombre": "Pimienta", "precio": "$25", "stock": "37"}, 
+            {"id": "004", "nombre": "Orégano", "precio": "$16", "stock": "87"}]
+
+Pedidos: [{"id_pedido": "001", "productoSolicitado": "Azúcar", "estado": "entregado"}, 
+          {"id_pedido": "002", "productoSolicitado": "Sal", "estado": "entregado"}]
+
+Clientes Registrados: [{"nombre": "Santiago", "Email": "santiafjs@gmail.com", "direccion": "calle 20 #6"}, 
+                       {"nombre": "Samuel", "Email": "samuelfjs@gmail.com", "direccion": "calle 2 #63"}]
